@@ -1,0 +1,171 @@
+#root {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;    
+}
+
+.enterance-screen{
+    /* */padding-top: 15vh;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin: 15vh;
+}
+.by{
+    margin: 1vh;
+}
+.players > div {
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    border: 3px solid rgb(52, 175, 79);
+    border-radius: 5px;
+    color: rgb(52, 175, 79);    
+    font-size: 30px;
+    padding: 5px 10px;
+    min-width: 250px;
+ /*   margin: 0 0 10px 0;*/
+    cursor: pointer;
+}
+
+.game-board {
+    display: inline-block;
+/*border: 10px solid #008b8b;*/
+    position: relative;
+    margin-top: 2vw;
+}
+
+.game-status {
+    display: block;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: #fff;
+    border: 5px solid rgb(52, 175, 79);;
+    padding: 4px;
+    width: 55%;
+    max-width: 500px;
+    font-size: 30px;
+   /* position: relative;*/
+    /*top: 15px;*/
+    z-index: 10;
+    justify-self: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.control-buttons {
+    max-width: 660px;
+    display: flex;
+    justify-content: center;
+    margin: 2vh auto;
+    text-align: right;
+    border: #65acb3 solid 2px;
+}
+
+.undo,.redo,.restart {
+    font-size: 1rem;
+    padding: 5px;
+    border: 3px solid #65acb3;
+    border-radius: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.undo.disabled {
+    cursor: not-allowed;
+    opacity: .4;
+}
+.redo.disabled{
+    cursor: not-allowed;
+    opacity: .4;
+}
+.restart.disabled{
+    cursor: not-allowed;
+    opacity: .4;
+}
+
+.board-col {
+    display: inline-block;
+    max-width: 80px;
+}
+
+.square {
+    background: no-repeat rgb(224, 222, 222);
+    border: none;
+    height: 80px;
+    width: 80px;
+    padding: 5px;
+    background-origin: content-box;
+    background-size: contain;
+    border: 1px solid white;
+}
+
+.isActive {
+    background-color: rgb(197, 243, 197);
+}
+
+.square.movable.player1-move {
+    background-color: #f3bfb6;
+}
+
+.square.movable.player2-move {
+    background-color: #bcffe9;
+}
+
+.square.player1, .square.player2, .square.movable {
+    cursor: pointer;
+}
+
+.square.black {
+    background-color: #65acb3;
+}
+
+.square.player1 {
+    background-image: url("img/player-1.png");
+}
+.square.player2 {
+    background-image: url("img/player-2.png");
+}
+
+@media only screen and (max-width: 700px) {
+
+    .board-col {
+        max-width: 60px;
+    }
+    .square {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+
+    .board-col {
+        max-width: 50px;
+    }
+    .square {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+
+    .board-col {
+        max-width: 40px;
+    }
+    .square {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+
+    .board-col {
+        max-width: 35px;
+    }
+    .square {
+        height: 35px;
+        width: 35px;
+    }
+}
