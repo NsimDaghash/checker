@@ -27,7 +27,7 @@ export class Opponent extends ReactCheckers {
                 computerMoves[coordinates] = pieceMoves;
             }
         }
-
+        
         return computerMoves;
     }
 
